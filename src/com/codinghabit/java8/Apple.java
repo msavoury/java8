@@ -37,5 +37,9 @@ public class Apple {
       return appleList;
     }
 
+    public static Apple makeApple() {
+        return new Apple(23, "red", "red");
+    }
+
 
 }
