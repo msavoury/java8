@@ -5,7 +5,7 @@ import com.codinghabit.java8.Apple;
 import java.util.function.Supplier;
 
 /**
- * Created by msavoury on 8/17/15.
+ * This file showcases some usages of method references. 
  */
 public class MethodReferences {
 
