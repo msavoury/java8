@@ -16,10 +16,14 @@ public class MethodReferences {
 
         //Now for the method reference:
         takeReference(Apple::makeApple);
+
+        //Now for the constructor reference
+        takeReference(Apple::new);
     }
 
     public static void takeReference(Supplier<Apple> supplier) {
         Apple a = supplier.get();
-        System.out.println(a);
+        System.out.println(a.getName() + a.getWeight());
     }
+
 }

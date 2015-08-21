@@ -21,6 +21,10 @@ public class Apple {
     private String color;
     private String name;
 
+    public Apple() {
+        this(20, "green", "granny smith");
+    }
+
     public Apple(int weight, String color, String name) {
         this.weight = weight;
         this.name = name;
