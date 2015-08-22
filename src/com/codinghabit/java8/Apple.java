@@ -24,6 +24,10 @@ public class Apple {
     public Apple() {
         this(20, "green", "granny smith");
     }
+    
+    public Apple(int weight, String color) {
+        this(weight, color, "default");
+    }
 
     public Apple(int weight, String color, String name) {
         this.weight = weight;
