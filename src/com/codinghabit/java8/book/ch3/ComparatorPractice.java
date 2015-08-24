@@ -26,5 +26,8 @@ public class ComparatorPractice {
         System.out.println("Printing sorted apples list reversed");
         apples.sort(cReversed);
         apples.forEach(a -> System.out.println(a.getName()));
+
+        //doing it all inline
+        apples.sort(Comparator.comparing(Apple::getColor).reversed());
     }
 }
