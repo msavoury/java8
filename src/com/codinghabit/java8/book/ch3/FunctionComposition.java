@@ -47,5 +47,10 @@ public class FunctionComposition {
         System.out.println(mul2.compose(add4).apply(4)); // 16
         System.out.println(add4.compose(mul2).apply(4)); // 12
 
+        Function<Integer, Integer> mod4 = (i) -> i % 4;
+        System.out.println(mod4.compose(add4).apply(4)); // (4 + 4) % 4 == 0
+
+
+
     }
 }
