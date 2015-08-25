@@ -16,7 +16,6 @@ public class FunctionComposition {
      * Examples of using .andThen to compose functions
      */
     public static void useAndThen() {
-
         Function<Integer, Integer> add1 = (i) -> i + 1;
         Function<Integer, Integer> add2 = (i) -> i + 2;
         Function add3 = add1.andThen(add2);
@@ -42,5 +41,11 @@ public class FunctionComposition {
         System.out.println(add4.compose(add2).apply(3));
         System.out.println(add2.compose(add4).apply(3));
         System.out.println((add6).apply(3));
+
+        Function<Integer, Integer> mul2 = (i) -> i * 2;
+
+        System.out.println(mul2.compose(add4).apply(4)); // 16
+        System.out.println(add4.compose(mul2).apply(4)); // 12
+
     }
 }
