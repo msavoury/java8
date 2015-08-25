@@ -1,6 +1,6 @@
 package com.codinghabit.java8.book.ch3;
 
-import com.codinghabit.java8.Apple;
+import com.codinghabit.java8.book.Apple;
 
 import java.util.function.Supplier;
 

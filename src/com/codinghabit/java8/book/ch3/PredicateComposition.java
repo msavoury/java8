@@ -1,6 +1,6 @@
 package com.codinghabit.java8.book.ch3;
 
-import com.codinghabit.java8.Apple;
+import com.codinghabit.java8.book.Apple;
 
 import java.util.List;
 import java.util.function.*;
@@ -38,6 +38,7 @@ public class PredicateComposition {
         IntPredicate isDiv5 = (i) -> i % 5 == 0;
 
         for (int i = 0; i <= max; i++) {
+            //using .and to compose a new test
             if (isDiv3.and(isDiv5).test(i)) {
                 System.out.println("FizzBuzz");
             }

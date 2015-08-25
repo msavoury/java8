@@ -1,4 +1,4 @@
-package com.codinghabit.java8;
+package com.codinghabit.java8.book;
 
 import java.util.ArrayList;
 import java.util.List;

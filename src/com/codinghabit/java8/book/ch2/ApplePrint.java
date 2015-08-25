@@ -1,9 +1,9 @@
 package com.codinghabit.java8.book.ch2;
 
-import com.codinghabit.java8.Apple;
-import com.codinghabit.java8.ApplePredicate;
+import com.codinghabit.java8.book.Apple;
+import com.codinghabit.java8.book.ApplePredicate;
 import java.util.List;
-import java.util.function.*;
+
 /**
  * Created by msavoury on 8/10/15.
  */
