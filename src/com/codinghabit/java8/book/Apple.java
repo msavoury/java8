@@ -2,6 +2,7 @@ package com.codinghabit.java8.book;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 /**
  * Created by msavoury on 8/10/15.
@@ -51,6 +52,17 @@ public class Apple {
 
     public static Apple makeApple() {
         return new Apple(23, "red", "red");
+    }
+
+    public static void processApples(Consumer<Apple> consumer, List<Apple> apples) {
+        for(Apple a : apples) {
+            consumer.accept(a);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return this.name + " " + this.color + " " + this.weight + "oz";
     }
 
 
