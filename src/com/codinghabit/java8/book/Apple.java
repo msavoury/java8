@@ -41,12 +41,16 @@ public class Apple {
 
       appleList.add(new Apple(10, "red", "macintosh"));
       appleList.add(new Apple(17, "green", "granny smith"));
+      appleList.add(new Apple(67, "green", "granny smith"));
+      appleList.add(new Apple(47, "green", "granny smith"));
       appleList.add(new Apple(12, "pink", "pink lady"));
       appleList.add(new Apple(12, "pink", "ambrosia"));
       appleList.add(new Apple(12, "green", "pink lady"));
       appleList.add(new Apple(108, "yellow", "gala"));
       appleList.add(new Apple(108, "red", "honeycrisp"));
       appleList.add(new Apple(17, "yellow", "gala"));
+      appleList.add(new Apple(34, "red", "red delicious"));
+      appleList.add(new Apple(44, "red", "red delicious"));
       return appleList;
     }
 

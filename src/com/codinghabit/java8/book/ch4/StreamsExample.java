@@ -8,6 +8,10 @@ import static java.lang.System.out;
 
 /**
  * First example of using Streams
+ *
+ * Note: Nothing in a stream is computed until 'collect()' is called
+ * Note: You can only consume a stream once!
+ * Note: Streams use internal iteration
  */
 public class StreamsExample {
 
@@ -18,7 +22,7 @@ public class StreamsExample {
 
         System.out.println("\n== Collecting small apples:");
         Apple.processApples((a)-> {out.println(a);}, smallApples);
-        
+
         System.out.println("\n== Collecting red apples:");
         Apple.processApples((a)-> {out.println(a);}, redApples);
     }
