@@ -8,6 +8,10 @@ import java.util.function.Consumer;
  * Created by msavoury on 8/10/15.
  */
 public class Apple {
+
+    static String[] names = {"red delicious", "pink", "granny smith", "gala", "ambrosia", "macintosh"};
+    static String[] colors = {"red", "pink", "green", "yellow", "brown"};
+
     public String getColor() {
         return color;
     }
@@ -62,6 +66,32 @@ public class Apple {
         for(Apple a : apples) {
             consumer.accept(a);
         }
+    }
+
+    public static String getRandomAppleName() {
+       int index = (int) (Math.random() * 100);
+        //return names[index % names.length];
+        return names[index % 2];
+    }
+    public static String getRandomAppleColor() {
+        int index = (int) (Math.random() * 100);
+        return colors[index % 2];
+    }
+    public static int getRandomAppleWeight() {
+        int index = (int) (Math.random() * 10);
+        return index;
+    }
+    public static Apple getRandomApple() {
+        return new Apple(getRandomAppleWeight(), getRandomAppleColor(), getRandomAppleName());
+    }
+    public static List<Apple> getListOfRandomApples(int size) {
+        if (size <= 0) throw new IllegalArgumentException("size must be greater than 0");
+        List<Apple> apples = new ArrayList<>();
+        while (size > 0) {
+            apples.add(getRandomApple());
+            size--;
+        }
+        return apples;
     }
 
     @Override
