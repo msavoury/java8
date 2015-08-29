@@ -20,4 +20,13 @@ public class MappingExample {
                                         .map((i) -> i * 2)
                                         .collect(toList());
     }
+
+    public static void doubleMap() {
+        List<Integer> list1 = MyUtils.generateIntList(10);
+        List<Integer> list2 = MyUtils.generateIntList(10);
+        List<Integer> sum = list1.stream()
+                                    .flatMap((i) -> list2.stream()
+                                                        .map(j -> (int)(j * i))
+                                        ).collect(toList());
+    }
 }
