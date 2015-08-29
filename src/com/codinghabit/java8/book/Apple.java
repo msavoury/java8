@@ -70,12 +70,12 @@ public class Apple {
 
     public static String getRandomAppleName() {
        int index = (int) (Math.random() * 100);
-        //return names[index % names.length];
-        return names[index % 2];
+        return names[index % names.length];
+        //return names[index % 2];
     }
     public static String getRandomAppleColor() {
         int index = (int) (Math.random() * 100);
-        return colors[index % 2];
+        return colors[index % colors.length];
     }
     public static int getRandomAppleWeight() {
         int index = (int) (Math.random() * 10);
