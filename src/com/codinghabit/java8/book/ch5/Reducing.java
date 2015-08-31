@@ -13,6 +13,7 @@ public class Reducing {
 
         reduceApple();
         reduceAsSum();
+        reduceAsSumWithMethodReference();
     }
 
     public static void reduceApple() {
@@ -27,6 +28,16 @@ public class Reducing {
     public static void reduceAsSum() {
         List<Integer> myInts = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         int sum = myInts.stream().reduce(0, (a, b) -> a + b);
+        System.out.println("sum is " + sum);
+    }
+
+    /*
+     * Reduce list to a sum of elements using the Integer::sum as a method
+     * reference
+     */
+    public static void reduceAsSumWithMethodReference() {
+        List<Integer> myInts = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        int sum = myInts.stream().reduce(0, Integer::sum);
         System.out.println("sum is " + sum);
     }
 
