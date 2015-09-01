@@ -4,6 +4,7 @@ import com.codinghabit.java8.book.Apple;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Created by msavoury on 8/29/15.
@@ -14,6 +15,7 @@ public class Reducing {
         reduceApple();
         reduceAsSum();
         reduceAsSumWithMethodReference();
+        optionalReduce();
     }
 
     public static void reduceApple() {
@@ -39,6 +41,17 @@ public class Reducing {
         List<Integer> myInts = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         int sum = myInts.stream().reduce(0, Integer::sum);
         System.out.println("sum is " + sum);
+    }
+
+    /*
+     * This example has an optional sum as a return type since the reduce
+     * call doesn't take a default argument.  If the list is empty, there will
+     * be no sum.
+     */
+    public static void optionalReduce() {
+        List<Integer> myInts = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        Optional<Integer> sum = myInts.stream().reduce((a,b) -> a + b);
+        System.out.println(sum);
     }
 
 
