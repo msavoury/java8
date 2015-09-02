@@ -22,7 +22,7 @@ public class MultiDimArrays {
         printRLTD();
         printTDLR();
         printTDRL();
-    
+
     }
 
     public static void printLRTD() {
