@@ -34,6 +34,15 @@ public class NumericStreams {
         OptionalDouble transactionAverage = transactions.stream().mapToInt(Transaction::getValue).average();
         System.out.println("Transaction average is " + transactionAverage);
 
+        usingRanges();
+    }
+
+    public static void usingRanges() {
+        System.out.println("Range 0 10");
+        IntStream.range(0,10).forEach(System.out::print);
+        System.out.println("\nRange Closed 0 10");
+        IntStream.rangeClosed(0,10).forEach(System.out::print);
         int[] values = IntStream.rangeClosed(1, 100).toArray();
+
     }
 }
