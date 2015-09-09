@@ -1,5 +1,7 @@
 package com.codinghabit.java8.book.ch5;
 
+import com.codinghabit.java8.book.Apple;
+
 import java.util.function.Consumer;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -12,6 +14,7 @@ public class GeneratingStreams {
 
     public static void main(String [] args) {
         streamOfStrings();
+        streamOfApples();
     }
 
     public static void streamOfStrings(){
@@ -26,6 +29,12 @@ public class GeneratingStreams {
 
         IntStream myStream = IntStream.of(1,2,3,4,5,6,7,8,9,10);
         myStream.map(i -> (i * 4));
-        myStream.forEach(System.out::println);
+        //myStream.forEach(System.out::println);
+    }
+
+    public static void streamOfApples() {
+        Stream<Apple> appleStream = Stream.of(new Apple(), new Apple());
+        int totalAppleWeight = appleStream.mapToInt(Apple::getWeight).sum();
+        System.out.println(totalAppleWeight);
     }
 }
